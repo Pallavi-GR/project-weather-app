@@ -133,7 +133,7 @@ function timeDisplay() {
     var type = "Evening";
   }
 
-  if (20 >= hours && hours < 5) {
+  if (20 <= hours && hours < 5) {
     //Night
     document.write(
       '<body style="background: #0f2027; background: radial-gradient(circle at 10% 20%, rgb(90, 92, 106) 0%, rgb(32, 45, 58) 81.3%); opacity:0.8; \ncolor : white">'

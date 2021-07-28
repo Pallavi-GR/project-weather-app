@@ -68,11 +68,6 @@ form.example button:hover {
   background: #0b7dda;
 }
 
-form.example::after {
-  content: "";
-  clear: both;
-}
-
 .temp {
   float: inline;
   font-size: 40px;
