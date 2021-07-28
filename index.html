@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>👨‍🏫 Week 7 Project</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Weather App</h1>
+      <form id="formSearch" class="mb-3 example" >
+        <input
+            type = "text"
+            placeholder = "Enter the place to search"
+            id="placeSearch"
+        />
+        <button
+          type="submit"
+          id="submit"
+          value= "Search"
+          class="btn btn-primary">
+          <i class="fa fa-search"></i>
+        </button>
+        <span class="currentLoc" id="locationButton">
+          <button class="btn btn-primary" id="currentLocation"> 
+               <span class="symbol"> &#x26B2;</span>
+          </button>
+        </span>
+      </form>
+
+      <div class="bodyContainer">
+      <h2 id="place"> Darmstadt </h2>
+      <div class="clearfix">
+      <div class="row">
+        <div class="col-6">
+          <ul>
+            <li id="temperature-description">Clear and Sunny</li>
+            <li class="temperature">
+                   <span class="image">
+                    <img
+                      src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                      alt="icon" id = "icon"/>
+                   </span>
+                  <span class="temp" id="temp">26</span>
+                  <span class="units">
+                    <a href="#" id="celcius">°C </a>|
+                    <a href="#" id="farh">°F</a>
+                  </span>
+                </li>
+          </ul>
+        </div>
+        <div class="col-5">
+            <ul class="dandt">
+              <li class="date" id="date">Date</li>
+              <li class="time" id="time">Time</li>
+            </ul>
+        </div>
+      </div>
+      </div> 
+      <div class="row">
+        <div class="col-6"  id="temperature" >
+        </div>
+        <div class="col-6 downcolumn">
+          <ul>
+            <li>Precipitation: 56 %</li>
+            <li id = "humidity" >Humidity : 45 %</li>
+            <li id = "wind" >Wind : 2 KM/ HR</li>
+          </ul>
+        </div>
+      </div>
+      </div>
+      <span class="footer">
+        <a
+          href=" https://github.com/Pallavi-GR/project-Weather"
+          target="_blank"
+        >
+          <img
+            class="gitImage"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh8L2IT3WGVeUE0hrTFceDFd3AFVcwMdwf5A&usqp=CAU"
+          />
+          Open-Source code</a
+        >
+      </span>
+      <p>by PALLAVI G R.</p>
+    </div>
+    </div>
+    
+    <script src="src/index.js"></script>
+  </body>
+</html>

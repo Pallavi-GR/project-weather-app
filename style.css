@@ -1,0 +1,110 @@
+body {
+  width: 60%;
+  margin: 50px auto;
+  font-family: sans-serif;
+  padding: 0 10px;
+  
+}
+
+.container{
+  border: 1px solid black;
+  margin: 5px;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 5px 5px rgb(147, 166, 192);}
+
+.bodyContainer{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+}
+
+h1 {
+   text-align: center;
+  display: block;
+  padding-left: 38px;
+  font-size: 50px;
+  font-family: "PT MONO", monospace;
+  color: rgb(35, 26, 114);
+  text-shadow: 1px 1px 2px #000000;
+}
+
+h2 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "PT MONO", monospace;
+  font-size: 30px;
+  font-weight: 800;
+  text-emphasis: bold;
+}
+
+
+ul {
+  text-decoration: none;
+  list-style: none;
+  text-transform: capitalize;
+  font-family: "PT MONO", monospace;
+}
+
+form{
+  padding-left: 10px;
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+form.example button {
+  float: left;
+  padding: 10px 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+} 
+
+.temp{
+  float: inline;
+  font-size: 40px;
+  font-family: fantasy;
+}
+
+.dandt{
+  box-shadow: 0 4px 8px 0 rgba(163, 161, 161, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 30px;
+}
+
+.footer {
+  font-size: 10px;
+  color: rgb(147, 166, 192);
+  text-decoration: none;
+}
+
+.gitImage {
+  width: 10px;
+  display: inline;
+}
+
+p {
+  display: inline;
+  font-size: 10px;
+  color: rgb(147, 166, 192);
+}
+
+.btn{
+  margin-left: 5px;
+  padding-right: 10px;
+}
+
+  
