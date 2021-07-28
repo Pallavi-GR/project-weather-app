@@ -3,23 +3,23 @@ body {
   margin: 50px auto;
   font-family: sans-serif;
   padding: 0 10px;
-  
 }
 
-.container{
+.container {
   border: 1px solid black;
   margin: 5px;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 5px 5px rgb(147, 166, 192);}
+  box-shadow: 5px 5px rgb(147, 166, 192);
+}
 
-.bodyContainer{
+.bodyContainer {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
 }
 
 h1 {
-   text-align: center;
+  text-align: center;
   display: block;
   padding-left: 38px;
   font-size: 50px;
@@ -40,7 +40,6 @@ h2 {
   text-emphasis: bold;
 }
 
-
 ul {
   text-decoration: none;
   list-style: none;
@@ -48,7 +47,7 @@ ul {
   font-family: "PT MONO", monospace;
 }
 
-form{
+form {
   padding-left: 10px;
   display: inline-flex;
   flex-wrap: wrap;
@@ -57,7 +56,7 @@ form{
 form.example button {
   float: left;
   padding: 10px 10px;
-  background: #2196F3;
+  background: #2196f3;
   color: white;
   font-size: 17px;
   border: 1px solid grey;
@@ -72,16 +71,17 @@ form.example button:hover {
 form.example::after {
   content: "";
   clear: both;
-} 
+}
 
-.temp{
+.temp {
   float: inline;
   font-size: 40px;
   font-family: fantasy;
 }
 
-.dandt{
-  box-shadow: 0 4px 8px 0 rgba(163, 161, 161, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.dandt {
+  box-shadow: 0 4px 8px 0 rgba(163, 161, 161, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 30px;
 }
 
@@ -102,9 +102,7 @@ p {
   color: rgb(147, 166, 192);
 }
 
-.btn{
+.btn {
   margin-left: 5px;
   padding-right: 10px;
 }
-
-  
