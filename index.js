@@ -86,7 +86,7 @@ function showTemp(response) {
   }
 }
 
-let submitBtn = document.querySelector("#submit");
+let submitBtn = document.querySelector("#submitButton");
 submitBtn.addEventListener("click", searchPosition);
 
 function searchPosition(position) {
@@ -118,7 +118,7 @@ function timeDisplay() {
     var type = "Morning";
   }
   if (8 <= hours && hours < 17) {
-    //Day
+    //Day time
     document.write(
       '<body style="background: #00B4DB; background: linear-gradient(108.1deg, rgb(167, 220, 225) 11.2%, rgb(217, 239, 242) 88.9%); opacity:0.7; color: black">'
     );
