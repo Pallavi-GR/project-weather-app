@@ -45,7 +45,6 @@ function search(city) {
 //search("darmstadt");
 
 function showTemp(response) {
-  // event.preventDefault();
   console.log(response.data);
   let cityName = response.data.name;
   console.log(`Temperature in ${cityName} is ${response.data.main.temp}`);
@@ -89,9 +88,9 @@ function showTemp(response) {
 let submitBtn = document.querySelector("#submitButton");
 submitBtn.addEventListener("click", searchPosition);
 
-function searchPosition(position) {
+function searchPosition(event) {
+  event.preventDefault();
   let searchValue = document.querySelector("#placeSearch");
-
   let city = searchValue.value;
   console.log(city);
   search(city);
