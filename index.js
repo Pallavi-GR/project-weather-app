@@ -42,7 +42,7 @@ function search(city) {
   axios.get(`${url}&appid=${apiKey}`).then(showTemp);
 }
 
-search("darmstadt");
+//search("darmstadt");
 
 function showTemp(response) {
   // event.preventDefault();
