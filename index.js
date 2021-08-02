@@ -35,14 +35,43 @@ date.innerHTML = `${currentDay}, ${currentDate}th ${currentMonth}, ${currentYear
 let time = document.querySelector("li#time");
 time.innerHTML = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()} HRS`;
 
+let apiKey = "cf3e506438214bee7911d63659fba7fa";
+
 function search(city) {
   //navigator.geolocation.getCurrentPosition(handlePosition);
-  let apiKey = "cf3e506438214bee7911d63659fba7fa";
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric`;
   axios.get(`${url}&appid=${apiKey}`).then(showTemp);
 }
 
-search("darmstadt");
+//search("darmstadt");
+
+navigator.geolocation.getCurrentPosition(handlePosition);
+function handlePosition(position) {
+  let latitude = position.coords.latitude;
+  console.log(`Latitude: ${latitude}`);
+  let longitude = position.coords.longitude;
+  console.log(`Longitude: ${longitude}`);
+  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric`;
+  axios.get(`${url}&appid=${apiKey}`).then(showPosition);
+}
+
+function showPosition(response) {
+  if (navigator.geolocation) {
+    let city = response.data.name;
+    console.log(response.data.name);
+    //let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric`;
+    search("darmstadt");
+    //let searchDisplay = document.querySelector("#placeDisplay");
+    //searchDisplay.innerHTML = `${city}`;
+    //let temperature = Math.round(response.data.main.temp);
+    //let temperatureElement = document.querySelector("#placeDisplay");
+    // let description = document.querySelector("#placeDisplay1");
+    //temperatureElement.innerHTML = ` It is ${temperature}ºC in ${city} `;
+    //description.innerHTML = response.data.weather[0].description;
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
 
 function showTemp(response) {
   console.log(response.data);
