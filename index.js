@@ -125,7 +125,8 @@ let submitBtn2 = document.querySelector("#currentLocation");
 submitBtn2.addEventListener("click", search2);
 
 function search2(position) {
-  search("darmstadt");
+  navigator.geolocation.getCurrentPosition(handlePosition);
+  //search("darmstadt");
 }
 
 function timeDisplay() {
