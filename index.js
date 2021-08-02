@@ -45,8 +45,10 @@ function search(city) {
 
 //search("darmstadt");
 
-navigator.geolocation.getCurrentPosition(handlePosition);
+navigator.geolocation.getCurrentPosition(handlePosition); // call for current location.
+
 function handlePosition(position) {
+  // gets latitude and logitude
   let latitude = position.coords.latitude;
   console.log(`Latitude: ${latitude}`);
   let longitude = position.coords.longitude;
@@ -56,18 +58,12 @@ function handlePosition(position) {
 }
 
 function showPosition(response) {
+  // gets the corresponding city name and calls the function for displaying the weather details.
   if (navigator.geolocation) {
     let city = response.data.name;
     console.log(response.data.name);
     //let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric`;
-    search("darmstadt");
-    //let searchDisplay = document.querySelector("#placeDisplay");
-    //searchDisplay.innerHTML = `${city}`;
-    //let temperature = Math.round(response.data.main.temp);
-    //let temperatureElement = document.querySelector("#placeDisplay");
-    // let description = document.querySelector("#placeDisplay1");
-    //temperatureElement.innerHTML = ` It is ${temperature}ºC in ${city} `;
-    //description.innerHTML = response.data.weather[0].description;
+    search(city);
   } else {
     x.innerHTML = "Geolocation is not supported by this browser.";
   }
