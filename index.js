@@ -96,12 +96,12 @@ function searchPosition(position) {
   search(city);
 }
 
-let submitBtn2 = document.querySelector("#currentLocation");
-submitBtn2.addEventListener("click", search2);
+//let submitBtn2 = document.querySelector("#currentLocation");
+//submitBtn2.addEventListener("click", search2);
 
-function search2(position) {
-  search("darmstadt");
-}
+//function search2(position) {
+//search("darmstadt");
+//}
 
 function timeDisplay() {
   var now = new Date();
