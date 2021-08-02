@@ -91,8 +91,9 @@ submitBtn.addEventListener("click", searchPosition);
 
 function searchPosition(position) {
   let searchValue = document.querySelector("#placeSearch");
-  console.log(searchValue.value);
+
   let city = searchValue.value;
+  console.log(city);
   search(city);
 }
 
