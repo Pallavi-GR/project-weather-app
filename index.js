@@ -103,4 +103,45 @@ function search2(position) {
   search("darmstadt");
 }
 
+function timeDisplay() {
+  var now = new Date();
+  var hours = now.getHours();
+  var ft = now.toLocaleString("en-US", {
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
+  });
+  if (5 <= hours && hours < 8) {
+    //Morning
+    document.write(
+      '<body style="background: #F3904F; background: radial-gradient(circle at 10% 20%, rgb(254, 255, 165) 0%, rgb(255, 232, 182) 90%); opacity:0.7; color: black">'
+    );
+    var type = "Morning";
+  }
+  if (8 <= hours && hours < 17) {
+    //Day time
+    document.write(
+      '<body style="background: #00B4DB; background: linear-gradient(108.1deg, rgb(167, 220, 225) 11.2%, rgb(217, 239, 242) 88.9%); opacity:0.7; color: black">'
+    );
+    var type = "Daytime";
+  }
+
+  if (17 <= hours && hours < 20) {
+    //Evening
+    document.write(
+      '<body style="background: #355C7D; background: linear-gradient(103deg, rgb(235, 225, 188) 7.2%, rgb(232, 188, 234) 57.5%, rgb(203, 209, 244) 90.7%); opacity:0.7; \ncolor: black">'
+    );
+    var type = "Evening";
+  }
+
+  if (20 <= hours && hours <= 24 && hours < 5) {
+    //Night
+    document.write(
+      '<body style="background: #0f2027; background: radial-gradient(circle at 10% 20%, rgb(90, 92, 106) 0%, rgb(32, 45, 58) 81.3%); opacity:0.8; \ncolor : white">'
+    );
+    var type = "Nighttime";
+  }
+}
+timeDisplay();
+
 //add last modified
