@@ -180,14 +180,13 @@ function displayForecast() {
     forecastHTML +
     `
     <div class="future-Forecast" id="ff">
-        <div class="col-2">
+        <div class = "col-2">
           <div class="ff-date">
               Thu <br />
           </div>
           <div class="ff-temp>
               <span class = "ff-maxTemp">
-              18°
-              </span> | 
+              18°</span> | 
               <span class="ff-minTemp"> 
               12°
               </span>
