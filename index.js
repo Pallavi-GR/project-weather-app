@@ -184,7 +184,7 @@ function displayForecast() {
     <div class="future-Forecast" id="ff">
         <div class = "col-2">
           <div class="ff-date">
-              Thu
+              ${day}
           </div>
           <img
               src="http://openweathermap.org/img/wn/50d@2x.png"
