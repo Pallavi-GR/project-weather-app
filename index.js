@@ -182,20 +182,19 @@ function displayForecast() {
     <div class="future-Forecast" id="ff">
         <div class = "col-2">
           <div class="ff-date">
-              Thu <br />
-          </div>
-          <div class="ff-temp>
-              <span class = "ff-maxTemp">
-              18°</span> | 
-              <span class="ff-minTemp"> 
-              12°
-              </span>
+              Thu
           </div>
           <img
               src="http://openweathermap.org/img/wn/50d@2x.png"
               alt="icon" width="42"
               id="icon"
           />
+          <div class="ff-temp>
+              <span class = "ff-maxTemp">
+              18°</span> | <span class="ff-minTemp"> 
+              12° </span>
+          </div>
+          
         </div>
     </div>
       `;
