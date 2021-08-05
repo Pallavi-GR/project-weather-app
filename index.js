@@ -81,6 +81,9 @@ function showTemp(response) {
   let iconElement = document.querySelector("#icon");
   let windElement = document.querySelector("#wind");
   let humidityElement = document.querySelector("#humidity");
+
+  displayForecast();
+
   placeElement.innerHTML = `${cityName}`;
   temperatureElement.innerHTML = `${temperature}`;
   description.innerHTML = ` ${response.data.weather[0].description}`;
@@ -169,5 +172,10 @@ function timeDisplay() {
   }
 }
 timeDisplay();
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#ff");
+  forecastElement.innerHTML = " Forecast. ";
+}
 
 //add last modified
