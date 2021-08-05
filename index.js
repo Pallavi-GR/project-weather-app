@@ -176,9 +176,11 @@ timeDisplay();
 function displayForecast() {
   let forecastElement = document.querySelector("#ff");
   let forecastHTML = `<div class = "row">`;
-  forecastHTML =
-    forecastHTML +
-    `
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
     <div class="future-Forecast" id="ff">
         <div class = "col-2">
           <div class="ff-date">
@@ -196,6 +198,8 @@ function displayForecast() {
         </div>
     </div>
       `;
+  });
+
   forecastHTML = forecastHTML + `</div`;
   forecastElement.innerHTML = forecastHTML;
 }
