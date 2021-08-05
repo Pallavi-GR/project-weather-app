@@ -175,7 +175,23 @@ timeDisplay();
 
 function displayForecast() {
   let forecastElement = document.querySelector("#ff");
-  forecastElement.innerHTML = " Forecast. ";
+  //forecastElement.innerHTML = " Forecast. ";
+
+  forecastElement.innerHTML = `
+  <div class="future-Forecast" id="ff">
+        <div class="row">
+          <div class="col-2">
+            Thu <br />
+            18° | 12°
+            <img
+              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+              alt="icon"
+              id="icon"
+            />
+          </div>
+        </div>
+      </div>
+      `;
 }
 
 //add last modified
