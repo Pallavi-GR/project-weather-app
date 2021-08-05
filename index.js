@@ -175,31 +175,33 @@ timeDisplay();
 
 function displayForecast() {
   let forecastElement = document.querySelector("#ff");
-  //forecastElement.innerHTML = " Forecast. ";
-  forecastElement.innerHTML = `
-  <div class="future-Forecast" id="ff">
-        <div class="row">
-          <div class="col-2">
-            <div class="ff-date">
+  let forecastHTML = `<div class = "row">`;
+  forecastHTML =
+    forecastHTML +
+    `
+    <div class="future-Forecast" id="ff">
+        <div class="col-2">
+          <div class="ff-date">
               Thu <br />
-            </div>
-            <div class="ff-temp>
+          </div>
+          <div class="ff-temp>
               <span class = "ff-maxTemp">
               18°
               </span> | 
               <span class="ff-minTemp"> 
               12°
               </span>
-            </div>
-            <img
-              src="http://openweathermap.org/img/wn/50d@2x.png"
-              alt="icon"
-              id="icon"
-            />
           </div>
+          <img
+              src="http://openweathermap.org/img/wn/50d@2x.png"
+              alt="icon" width="42"
+              id="icon"
+          />
         </div>
-      </div>
+    </div>
       `;
+  forecastHTML = forecastHTML + `</div`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 //add last modified
