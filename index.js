@@ -190,9 +190,8 @@ function displayForecast() {
               id="icon"
           />
           <div class="ff-temp>
-              <span class = "ff-maxTemp">
-              18°</span> | <span class="ff-minTemp"> 
-              12° </span>
+              <span class = "ff-maxTemp">18° </span> 
+              <span class="ff-minTemp">12°</span>
           </div>
           
         </div>
