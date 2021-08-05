@@ -105,9 +105,11 @@ p {
 .col-2 {
   display: block;
   cursor: pointer;
-  margin-bottom: auto;
-  padding: 0;
-  padding-bottom: 1px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   font-family: arial, sans-serif;
   color: #202124;
 }
