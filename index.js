@@ -82,7 +82,7 @@ function showTemp(response) {
   let windElement = document.querySelector("#wind");
   let humidityElement = document.querySelector("#humidity");
 
-  displayForecast();
+  //displayForecast();
 
   placeElement.innerHTML = `${cityName}`;
   temperatureElement.innerHTML = `${temperature}`;
@@ -113,6 +113,7 @@ function showTemp(response) {
   }
 }
 
+// searching for the place based on input.
 let submitBtn = document.querySelector("#submitButton");
 submitBtn.addEventListener("click", searchPosition);
 
@@ -122,8 +123,20 @@ function searchPosition(event) {
   let city = searchValue.value;
   console.log(city);
   search(city);
+
+  //getting the future forecast.
+  getForecast(response.data.coord);
 }
 
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "";
+  let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiURL);
+  axios.get(apiURL).then(displayForecast);
+}
+
+//updating the currenting location.
 let submitBtn2 = document.querySelector("#currentLocation");
 submitBtn2.addEventListener("click", search2);
 
@@ -173,7 +186,8 @@ function timeDisplay() {
 }
 timeDisplay();
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data);
   let forecastElement = document.querySelector("#ff");
   let forecastHTML = `<div class = "row">`;
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
