@@ -125,7 +125,7 @@ function searchPosition(event) {
   search(city);
 
   //getting the future forecast.
-  getForecast(response.data.coord);
+  getForecast();
 }
 
 function getForecast(coordinates) {
