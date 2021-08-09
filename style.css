@@ -58,13 +58,13 @@ ul {
 form {
   padding-left: 15px;
   padding-right: 10px;
-  display: inline-flex;
+  display: inline-block;
   flex-wrap: wrap;
 }
 
 form.example button {
   float: left;
-  padding: 10px 10px;
+  padding: 10px 1px;
   background: #2196f3;
   color: white;
   font-size: 17px;
