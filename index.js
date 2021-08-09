@@ -231,7 +231,7 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#ff");
   let forecastHTML = `<div class = "row">`;
   //let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-  forecast.forEach(function (forecastDay) {
+  forecast.forEach(function (forecastDay, index) {
     forecastHTML =
       forecastHTML +
       `
@@ -240,6 +240,7 @@ function displayForecast(response) {
           <div class="ff-date">
               ${formatDay(forecastDay.dt)}
           </div>
+          ${index}
           <img
               src="http://openweathermap.org/img/wn/${
                 forecastDay.weather[0].icon
