@@ -82,7 +82,7 @@ function showTemp(response) {
   let windElement = document.querySelector("#wind");
   let humidityElement = document.querySelector("#humidity");
 
-  //displayForecast();
+  displayForecast();
 
   placeElement.innerHTML = `${cityName}`;
   temperatureElement.innerHTML = `${temperature}`;
@@ -123,9 +123,8 @@ function searchPosition(event) {
   let city = searchValue.value;
   console.log(city);
   search(city);
-
   //getting the future forecast.
-  getForecast();
+  // getForecast();
 }
 
 function getForecast() {
@@ -215,7 +214,6 @@ function displayForecast(response) {
     </div>
       `;
   });
-
   forecastHTML = forecastHTML + `</div`;
   forecastElement.innerHTML = forecastHTML;
 }
