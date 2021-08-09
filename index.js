@@ -82,7 +82,7 @@ function showTemp(response) {
   let windElement = document.querySelector("#wind");
   let humidityElement = document.querySelector("#humidity");
 
-  displayForecast();
+  //displayForecast();
 
   placeElement.innerHTML = `${cityName}`;
   temperatureElement.innerHTML = `${temperature}`;
