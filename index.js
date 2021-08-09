@@ -186,7 +186,7 @@ function timeDisplay() {
 }
 timeDisplay();
 
-function displayForecast() {
+function displayForecast(response) {
   console.log(response.data);
   let forecastElement = document.querySelector("#ff");
   let forecastHTML = `<div class = "row">`;
