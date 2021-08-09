@@ -232,9 +232,10 @@ function displayForecast(response) {
   let forecastHTML = `<div class = "row">`;
   //let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
   forecast.forEach(function (forecastDay, index) {
-    forecastHTML =
-      forecastHTML +
-      `
+    if (index > 0 && index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
     <div class="future-Forecast" id="ff">
         <div class = "col-2">
           <div class="ff-date">
@@ -259,6 +260,7 @@ function displayForecast(response) {
         </div>
     </div>
       `;
+    }
   });
   forecastHTML = forecastHTML + `</div`;
   forecastElement.innerHTML = forecastHTML;
