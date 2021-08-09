@@ -107,9 +107,9 @@ p {
   cursor: pointer;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: auto;
+  padding-left: 20px;
   margin-top: auto;
-  margin-left: auto;
+  margin-left: 10px;
   margin-bottom: 10px;
   font-family: arial, sans-serif;
   color: #202124;
