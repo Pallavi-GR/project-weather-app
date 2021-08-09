@@ -112,7 +112,7 @@ function showTemp(response) {
     tempFarh.innerHTML = `${tempFarenheit}`;
   }
 
-  displayForecast();
+  //displayForecast();
 }
 
 // searching for the place based on input.
