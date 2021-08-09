@@ -130,7 +130,7 @@ function searchPosition(event) {
 }
 
 function getForecast(lat, lon) {
-  console.log(coordinates);
+  //console.log(coordinates);
   let apiKey = "";
   let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
   console.log(apiURL);
@@ -188,7 +188,7 @@ function timeDisplay() {
 timeDisplay();
 
 function displayForecast(response) {
-  console.log(response.data.main);
+  console.log(response.data);
   let forecastElement = document.querySelector("#ff");
   let forecastHTML = `<div class = "row">`;
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
