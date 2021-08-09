@@ -232,7 +232,7 @@ function displayForecast(response) {
   let forecastHTML = `<div class = "row">`;
   //let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
   forecast.forEach(function (forecastDay, index) {
-    if (index > 0 && index < 6) {
+    if (index > 0 && index <= 6) {
       forecastHTML =
         forecastHTML +
         `
