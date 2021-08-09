@@ -117,7 +117,7 @@ function showTemp(response) {
 
   console.log(lat);
   console.log(lon);
-  // getForecast(lat, lon);
+  getForecast(lat, lon);
 }
 
 // searching for the place based on input.
