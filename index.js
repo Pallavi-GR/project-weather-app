@@ -55,7 +55,7 @@ function handlePosition(position) {
   console.log(`Longitude: ${longitude}`);
   let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric`;
   axios.get(`${url}&appid=${apiKey}`).then(showPosition);
-  getForecast();
+  //getForecast();
 }
 
 function showPosition(response) {
@@ -111,7 +111,7 @@ function showTemp(response) {
     tempFarh.innerHTML = `${tempFarenheit}`;
   }
 
-  //displayForecast();
+  displayForecast();
 }
 
 // searching for the place based on input.
@@ -128,13 +128,13 @@ function searchPosition(event) {
   //getForecast();
 }
 
-function getForecast(coordinates) {
+/*function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = "";
   let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   console.log(apiURL);
   axios.get(apiURL).then(displayForecast);
-}
+}*/
 
 //updating the currenting location.
 let submitBtn2 = document.querySelector("#currentLocation");
@@ -186,8 +186,8 @@ function timeDisplay() {
 }
 timeDisplay();
 
-function displayForecast(response) {
-  console.log(response.data.main);
+function displayForecast() {
+  //console.log(response.data.main);
   let forecastElement = document.querySelector("#ff");
   let forecastHTML = `<div class = "row">`;
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
