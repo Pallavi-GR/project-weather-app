@@ -55,7 +55,7 @@ let currentMonth = months[now.getMonth()];
 let currentYear = now.getUTCFullYear();
 
 let date = document.querySelector("li#date");
-date.innerHTML = `${currentDay}, ${currentDate}th ${currentMonth}, ${currentYear}`;
+date.innerHTML = `Last Updated: ${currentDay}, ${currentDate}th ${currentMonth}`;
 
 let time = document.querySelector("li#time");
 time.innerHTML = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()} HRS`;
