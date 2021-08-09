@@ -188,7 +188,7 @@ timeDisplay();
 
 function displayForecast(response) {
   console.log(response.data);
-  console.log("Hello");
+  //console.log("Hello");
   let forecastElement = document.querySelector("#ff");
   let forecastHTML = `<div class = "row">`;
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
