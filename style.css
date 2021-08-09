@@ -48,8 +48,8 @@ ul {
 }
 
 .lastU {
-  padding: auto;
-  margin: auto;
+  padding: 10px;
+  margin: 10px;
   text-decoration: none;
   list-style: none;
   text-transform: capitalize;
