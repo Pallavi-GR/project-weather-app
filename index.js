@@ -82,7 +82,7 @@ function showTemp(response) {
   let windElement = document.querySelector("#wind");
   let humidityElement = document.querySelector("#humidity");
 
-  //displayForecast();
+  displayForecast();
 
   placeElement.innerHTML = `${cityName}`;
   temperatureElement.innerHTML = `${temperature}`;
@@ -186,8 +186,8 @@ function timeDisplay() {
 }
 timeDisplay();
 
-function displayForecast(response) {
-  console.log(response.data);
+function displayForecast() {
+  //console.log(response.data);
   //console.log("Hello");
   let forecastElement = document.querySelector("#ff");
   let forecastHTML = `<div class = "row">`;
