@@ -63,6 +63,7 @@ function showPosition(response) {
   if (navigator.geolocation) {
     let city = response.data.name;
     console.log(response.data.name);
+    console.log(response.data.coord);
     //let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric`;
     search(city);
   } else {
