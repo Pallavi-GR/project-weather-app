@@ -1,3 +1,28 @@
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0{minutes}`;
+  }
+
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let day = days[date.getDay()];
+  return `${day}${hours}:${minutes}`;
+}
+
 let now = new Date();
 let currentDate = now.getDate();
 
@@ -111,8 +136,6 @@ function showTemp(response) {
     let tempFarenheit = Math.round((temperature * 9) / 5 + 32);
     tempFarh.innerHTML = `${tempFarenheit}`;
   }
-
-  //displayForecast();
 }
 
 // searching for the place based on input.
@@ -125,12 +148,9 @@ function searchPosition(event) {
   let city = searchValue.value;
   console.log(city);
   search(city);
-  //getting the future forecast of the place being searched.
-  //getForecast();
 }
 
 function getForecast(lat, lon) {
-  //console.log(coordinates);
   let apiKey = "cf3e506438214bee7911d63659fba7fa";
   let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
   console.log(apiURL);
@@ -187,6 +207,23 @@ function timeDisplay() {
 }
 timeDisplay();
 
+function formatDay(date) {
+  let date = new Date(timestamp * 1000);
+  let day = day.getDay();
+
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  return days[day];
+}
+
 function displayForecast(response) {
   console.log(response.data);
   console.log(response.data.daily);
@@ -201,10 +238,12 @@ function displayForecast(response) {
     <div class="future-Forecast" id="ff">
         <div class = "col-2">
           <div class="ff-date">
-              ${forecastDay.dt}
+              ${formatDay(forecastDay.dt)}
           </div>
           <img
-              src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
+              src="http://openweathermap.org/img/wn/${
+                forecastDay.weather[0].icon
+              }@2x.png"
               alt="icon" width="42"
               id="icon"
           />
