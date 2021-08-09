@@ -112,8 +112,8 @@ function showTemp(response) {
     tempFarh.innerHTML = `${tempFarenheit}`;
   }
 
-  let lat = response.data.lat;
-  let lon = response.data.lon;
+  let lat = response.data.coord.lat;
+  let lon = response.data.coord.lon;
 
   console.log(lat);
   console.log(lon);
