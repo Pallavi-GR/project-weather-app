@@ -55,7 +55,7 @@ function handlePosition(position) {
   console.log(`Longitude: ${longitude}`);
   let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric`;
   axios.get(`${url}&appid=${apiKey}`).then(showPosition);
-  //getForecast();
+  getForecast();
 }
 
 function showPosition(response) {
@@ -124,8 +124,8 @@ function searchPosition(event) {
   let city = searchValue.value;
   console.log(city);
   search(city);
-  //getting the future forecast.
-  getForecast();
+  //getting the future forecast of the place being searched.
+  //getForecast();
 }
 
 function getForecast(coordinates) {
