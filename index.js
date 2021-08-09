@@ -111,7 +111,7 @@ function showTemp(response) {
     tempFarh.innerHTML = `${tempFarenheit}`;
   }
 
-  displayForecast();
+  //displayForecast();
 }
 
 // searching for the place based on input.
@@ -125,7 +125,7 @@ function searchPosition(event) {
   console.log(city);
   search(city);
   //getting the future forecast.
-  //getForecast();
+  getForecast();
 }
 
 function getForecast(coordinates) {
@@ -187,7 +187,7 @@ function timeDisplay() {
 timeDisplay();
 
 function displayForecast(response) {
-  console.log(response.data);
+  console.log(response.data.main);
   let forecastElement = document.querySelector("#ff");
   let forecastHTML = `<div class = "row">`;
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
