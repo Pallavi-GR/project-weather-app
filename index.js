@@ -82,8 +82,6 @@ function showTemp(response) {
   let windElement = document.querySelector("#wind");
   let humidityElement = document.querySelector("#humidity");
 
-  displayForecast();
-
   placeElement.innerHTML = `${cityName}`;
   temperatureElement.innerHTML = `${temperature}`;
   description.innerHTML = ` ${response.data.weather[0].description}`;
@@ -111,6 +109,8 @@ function showTemp(response) {
     let tempFarenheit = Math.round((temperature * 9) / 5 + 32);
     tempFarh.innerHTML = `${tempFarenheit}`;
   }
+
+  displayForecast();
 }
 
 // searching for the place based on input.
