@@ -47,6 +47,13 @@ ul {
   font-family: "PT MONO", monospace;
 }
 
+.lastU {
+  text-decoration: none;
+  list-style: none;
+  text-transform: capitalize;
+  font-family: "PT MONO", monospace;
+}
+
 form {
   padding-left: 10px;
   display: inline-flex;
