@@ -248,8 +248,12 @@ function displayForecast(response) {
               id="icon"
           />
           <div class="ff-temp>
-              <span class = "ff-maxTemp">${forecastDay.temp.max}°</span> 
-              <span class="ff-minTemp">${forecastDay.temp.min}°</span>
+              <span class = "ff-maxTemp">${Math.round(
+                forecastDay.temp.max
+              )}°</span> 
+              <span class="ff-minTemp">${Math.round(
+                forecastDay.temp.min
+              )}°</span>
           </div>
         </div>
     </div>
