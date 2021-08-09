@@ -190,26 +190,27 @@ timeDisplay();
 function displayForecast(response) {
   console.log(response.data);
   console.log(response.data.daily);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#ff");
   let forecastHTML = `<div class = "row">`;
-  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-  days.forEach(function (day) {
+  //let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  forecast.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
       `
     <div class="future-Forecast" id="ff">
         <div class = "col-2">
           <div class="ff-date">
-              ${day}
+              ${forecastDay.dt}
           </div>
           <img
-              src="http://openweathermap.org/img/wn/50d@2x.png"
+              src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
               alt="icon" width="42"
               id="icon"
           />
           <div class="ff-temp>
-              <span class = "ff-maxTemp">18°</span> 
-              <span class="ff-minTemp">12°</span>
+              <span class = "ff-maxTemp">${forecastDay.temp.max}°</span> 
+              <span class="ff-minTemp">${forecastDay.temp.min}°</span>
           </div>
         </div>
     </div>
