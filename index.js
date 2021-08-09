@@ -32,7 +32,7 @@ let currentYear = now.getUTCFullYear();
 let date = document.querySelector("li#date");
 date.innerHTML = `${currentDay}, ${currentDate}th ${currentMonth}`;
 
-let time = document.querySelector("li#time");
+let time = document.querySelector("#lastUpdated");
 time.innerHTML = ` Last Updated: ${now.getHours()}:${now.getMinutes()} HRS`;
 
 let apiKey = "cf3e506438214bee7911d63659fba7fa";
