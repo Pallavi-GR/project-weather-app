@@ -106,10 +106,9 @@ p {
   text-align: center;
   cursor: pointer;
   padding-top: 10px;
-  padding-bottom: 10px;
   padding-left: 20px;
   margin-top: auto;
-  margin-left: 10px;
+  margin-left: auto;
   margin-bottom: 10px;
   font-family: arial, sans-serif;
   color: #202124;
