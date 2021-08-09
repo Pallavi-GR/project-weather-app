@@ -63,7 +63,7 @@ form {
 }
 
 form.example button {
-  float: left;
+  float: inline-start;
   padding: 10px 1px;
   background: #2196f3;
   color: white;
