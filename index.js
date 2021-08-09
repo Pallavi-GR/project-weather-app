@@ -208,7 +208,7 @@ function timeDisplay() {
 timeDisplay();
 
 function formatDay(date) {
-  let date = new Date(timestamp * 1000);
+  let date1 = new Date(timestamp * 1000);
   let day = day.getDay();
 
   let days = [
