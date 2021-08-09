@@ -48,6 +48,8 @@ ul {
 }
 
 .lastU {
+  padding: auto auto;
+  margin: auto auto;
   text-decoration: none;
   list-style: none;
   text-transform: capitalize;
@@ -82,8 +84,7 @@ form.example button:hover {
 }
 
 .dandt,
-.otherParam,
-.lastU {
+.otherParam {
   box-shadow: 0 4px 8px 0 rgba(163, 161, 161, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 30px;
