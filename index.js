@@ -72,7 +72,7 @@ function showPosition(response) {
 }
 
 function showTemp(response) {
-  console.log(response.data);
+  //console.log(response.data);
   let cityName = response.data.name;
   console.log(`Temperature in ${cityName} is ${response.data.main.temp}`);
   console.log(cityName);
