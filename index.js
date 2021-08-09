@@ -1,28 +1,3 @@
-function formatDate(timestamp) {
-  let date = new Date(timestamp);
-  let hours = date.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0{minutes}`;
-  }
-
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-
-  let day = days[date.getDay()];
-  return `${day}${hours}:${minutes}`;
-}
-
 let now = new Date();
 let currentDate = now.getDate();
 
@@ -87,8 +62,8 @@ function showPosition(response) {
   // gets the corresponding city name and calls the function for displaying the weather details.
   if (navigator.geolocation) {
     let city = response.data.name;
-    console.log(response.data.name);
-    console.log(response.data.coord);
+    //console.log(response.data.name);
+    // console.log(response.data.coord);
     //let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric`;
     search(city);
   } else {
@@ -100,7 +75,7 @@ function showTemp(response) {
   //console.log(response.data);
   let cityName = response.data.name;
   console.log(`Temperature in ${cityName} is ${response.data.main.temp}`);
-  console.log(cityName);
+  //console.log(cityName);
   let temperature = Math.round(response.data.main.temp);
   let placeElement = document.querySelector("#place");
   let temperatureElement = document.querySelector("#temp");
@@ -136,6 +111,13 @@ function showTemp(response) {
     let tempFarenheit = Math.round((temperature * 9) / 5 + 32);
     tempFarh.innerHTML = `${tempFarenheit}`;
   }
+
+  let lat = response.data.coords.lat;
+  let lon = response.data.coords.lon;
+
+  console.log(lat);
+  console.log(lon);
+  // getForecast(lat, lon);
 }
 
 // searching for the place based on input.
