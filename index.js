@@ -110,7 +110,7 @@ function showTemp(response) {
     tempFarh.innerHTML = `${tempFarenheit}`;
   }
 
-  displayForecast();
+  //displayForecast();
 }
 
 // searching for the place based on input.
@@ -124,14 +124,13 @@ function searchPosition(event) {
   console.log(city);
   search(city);
   //getting the future forecast.
-  // getForecast();
+  getForecast();
 }
 
-function getForecast() {
-  //console.log(coordinates);
+function getForecast(coordinates) {
+  console.log(coordinates);
   let apiKey = "";
   let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-
   console.log(apiURL);
   axios.get(apiURL).then(displayForecast);
 }
@@ -186,8 +185,8 @@ function timeDisplay() {
 }
 timeDisplay();
 
-function displayForecast() {
-  //console.log(response.data);
+function displayForecast(response) {
+  console.log(response.data);
   //console.log("Hello");
   let forecastElement = document.querySelector("#ff");
   let forecastHTML = `<div class = "row">`;
