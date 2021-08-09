@@ -49,9 +49,8 @@ ul {
 
 .lastU {
   padding-left: 20px;
-  margin-left: 10px;
+  margin-left: 20px;
   text-decoration: none;
-  list-style: none;
   text-transform: capitalize;
   font-family: "PT MONO", monospace;
 }
