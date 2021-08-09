@@ -209,7 +209,7 @@ timeDisplay();
 
 function formatDay(timestamp) {
   let date1 = new Date(timestamp * 1000);
-  let day = day.getDay();
+  let day = date1.getDay();
 
   let days = [
     "Sunday",
