@@ -16,9 +16,11 @@ body {
 
 .bodyContainer {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 1px dashed rgb(102, 101, 101);
   border-radius: 10px;
   text-align: center;
-
+  padding: 20px;
+  margin: 5px;
 }
 
 h1 {
