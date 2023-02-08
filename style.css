@@ -20,6 +20,7 @@ body {
   border-radius: 10px;
   text-align: center;
   padding: 20px;
+  display: block;
   margin: 5px;
 }
 
@@ -128,3 +129,6 @@ p {
   color: #202124;
 }
 
+.row{
+  
+}
